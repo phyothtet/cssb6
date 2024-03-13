@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform with rotate</title>
+    <style type="text/css">
+
+        .container{
+            width:1000px;
+            background-color: gray;
+            
+            /* rem ( root element's font size) */
+            /* 1rem = 16px; */
+            /* margin:3rem 0; */
+            margin:48px 0;
+        }
+
+        .container .square{
+            width:150px;
+            height:50px;
+            background-color: blue;
+            color:#fff;
+            font-size:20px;
+
+            text-align:center;
+            line-height:50px;
+
+            border-radius:3px;
+
+            transition-property:transform;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+        }
+
+        .container .square:hover{
+            transform:translate(850px);
+        }
+
+        #rotate:hover{
+            /* rotate(anglexy) */
+            transform:rotate(45deg);
+            transform:rotate(-45deg);
+            transform:rotate(90deg);
+
+            transform:rotate(360deg);
+            transform:rotate(720deg);
+            
+            /* 1turn = 360deg */
+            transform:rotate(4turn);
+            transform:rotate(-2turn);
+
+            /* 400grad = 360deg = 1turn */
+            /* transform:rotate(400grad); */
+            transform:rotate(-200grad);
+            
+
+        }
+
+        #rotatex:hover{
+            /* rotateX(angle) */
+            transform: rotateX(45deg);
+            transform: rotateX(-45deg);
+            transform: rotateX(90deg);
+        }
+
+        #rotatey:hover{
+            /* rotateY(angle) */
+            transform: rotateY(45deg);
+            transform: rotateY(-45deg);
+            transform: rotateY(90deg);
+
+        }
+
+
+ 
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="rotate" class="square">DIV 1 XY</div>
+    </div>
+
+    <div class="container">
+        <div id="rotatex" class="square">DIV 1 X</div>
+    </div>
+
+    <div class="container">
+        <div id="rotatey" class="square">DIV 3 Y</div>
+    </div>
+
+    
+
+</body>
+</html>
+
+
